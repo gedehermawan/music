@@ -1,0 +1,26 @@
+apply plugin: 'application'
+apply plugin: 'spring-boot'
+
+mainClassName = 'com.peentar.smartstock.dbmigration.Main'
+
+buildscript {
+    ext {
+        springBootVersion = '1.4.1.RELEASE'
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath "io.spring.gradle:dependency-management-plugin:0.6.0.RELEASE"
+    }
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter:1.4.1.RELEASE'
+    compile 'org.apache.tomcat:tomcat-jdbc:8.0.28'
+    compile 'org.flywaydb:flyway-core:4.0.3'
+
+    runtime 'org.postgresql:postgresql:9.4-1205-jdbc42'
+}
+
+bootRepackage {
+    classifier = "bin"
+}

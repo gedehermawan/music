@@ -1,0 +1,14 @@
+rootProject.name = 'syefti-pay'
+
+def String[] modules = [
+    'backend',
+    'dbmigration'
+]
+
+include modules
+
+modules.each { name ->
+    def p = findProject(":${name}")
+    p.name = "syefti-pay-${name}"
+    p.buildFileName = "${name}.gradle"
+}
