@@ -3,7 +3,7 @@ package com.syeftipay.backend.restaurant;
 import com.syeftipay.backend.address.city.City;
 import com.syeftipay.backend.address.district.District;
 import com.syeftipay.backend.address.province.Province;
-import com.syeftipay.backend.user.User;
+import com.syeftipay.backend.user.Account;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -63,11 +63,11 @@ public class Restaurant {
 
   @ManyToOne
   @JoinColumn(name = "create_by")
-  User createBy;
+  Account createBy;
 
   @ManyToOne
   @JoinColumn(name = "update_by")
-  User updateBy;
+  Account updateBy;
 
   public Restaurant() {
   }
@@ -182,5 +182,29 @@ public class Restaurant {
 
   public void setUpdateAt(Date updateAt) {
     this.updateAt = updateAt;
+  }
+
+  public char getDeleted() {
+    return deleted;
+  }
+
+  public void setDeleted(char deleted) {
+    this.deleted = deleted;
+  }
+
+  public Account getCreateBy() {
+    return createBy;
+  }
+
+  public void setCreateBy(Account createBy) {
+    this.createBy = createBy;
+  }
+
+  public Account getUpdateBy() {
+    return updateBy;
+  }
+
+  public void setUpdateBy(Account updateBy) {
+    this.updateBy = updateBy;
   }
 }

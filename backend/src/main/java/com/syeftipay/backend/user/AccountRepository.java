@@ -3,7 +3,7 @@ package com.syeftipay.backend.user;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.query.Param;
 
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface AccountRepository extends JpaRepository<Account, Long> {
 
-  User findByEmail(@Param("email")String email);
+  Account findByEmail(@Param("email")String email);
 }

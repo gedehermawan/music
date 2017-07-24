@@ -7,12 +7,12 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "user")
-public class User {
+@Table(name = "account")
+public class Account {
   @Id
   @GeneratedValue(strategy= GenerationType.IDENTITY)
-  @Column(name="user_id")
-  long userId;
+  @Column(name="account_id")
+  long accountId;
 
   @Column(name = "email")
   String email;
@@ -36,21 +36,21 @@ public class User {
 
   @ManyToOne
   @JoinColumn(name = "create_by")
-  User createBy;
+  Account createBy;
 
   @ManyToOne
   @JoinColumn(name = "update_by")
-  User updateBy;
+  Account updateBy;
 
-  public User() {
+  public Account() {
   }
 
-  public long getUserId() {
-    return userId;
+  public long getAccountId() {
+    return accountId;
   }
 
-  public void setUserId(long userId) {
-    this.userId = userId;
+  public void setAccountId(long accountId) {
+    this.accountId = accountId;
   }
 
   public String getEmail() {
@@ -101,19 +101,19 @@ public class User {
     this.deleted = deleted;
   }
 
-  public User getCreateBy() {
+  public Account getCreateBy() {
     return createBy;
   }
 
-  public void setCreateBy(User createBy) {
+  public void setCreateBy(Account createBy) {
     this.createBy = createBy;
   }
 
-  public User getUpdateBy() {
+  public Account getUpdateBy() {
     return updateBy;
   }
 
-  public void setUpdateBy(User updateBy) {
+  public void setUpdateBy(Account updateBy) {
     this.updateBy = updateBy;
   }
 }

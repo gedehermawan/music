@@ -1,7 +1,7 @@
 package com.syeftipay.backend.restaurant.menu;
 
 import com.syeftipay.backend.restaurant.Restaurant;
-import com.syeftipay.backend.user.User;
+import com.syeftipay.backend.user.Account;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -39,11 +39,11 @@ public class Menu {
 
   @ManyToOne
   @JoinColumn(name = "create_by")
-  User createBy;
+  Account createBy;
 
   @ManyToOne
   @JoinColumn(name = "update_by")
-  User updateBy;
+  Account updateBy;
 
   public Menu() {
   }
@@ -104,19 +104,19 @@ public class Menu {
     this.updateAt = updateAt;
   }
 
-  public User getCreateBy() {
+  public Account getCreateBy() {
     return createBy;
   }
 
-  public void setCreateBy(User createBy) {
+  public void setCreateBy(Account createBy) {
     this.createBy = createBy;
   }
 
-  public User getUpdateBy() {
+  public Account getUpdateBy() {
     return updateBy;
   }
 
-  public void setUpdateBy(User updateBy) {
+  public void setUpdateBy(Account updateBy) {
     this.updateBy = updateBy;
   }
 
