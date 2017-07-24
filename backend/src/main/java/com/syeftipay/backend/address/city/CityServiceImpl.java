@@ -1,7 +1,7 @@
-package com.peentar.syeftipay.backend.address.city;
+package com.syeftipay.backend.address.city;
 
-import com.peentar.syeftipay.backend.address.province.Province;
-import com.peentar.syeftipay.backend.address.province.ProvinceService;
+import com.syeftipay.backend.address.province.Province;
+import com.syeftipay.backend.address.province.ProvinceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

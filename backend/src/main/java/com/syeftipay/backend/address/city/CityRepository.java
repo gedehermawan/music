@@ -1,6 +1,6 @@
-package com.peentar.syeftipay.backend.address.city;
+package com.syeftipay.backend.address.city;
 
-import com.peentar.syeftipay.backend.address.province.Province;
+import com.syeftipay.backend.address.province.Province;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.query.Param;
 

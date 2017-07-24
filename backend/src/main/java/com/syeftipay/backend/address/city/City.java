@@ -1,6 +1,6 @@
-package com.peentar.syeftipay.backend.address.city;
+package com.syeftipay.backend.address.city;
 
-import com.peentar.syeftipay.backend.address.province.Province;
+import com.syeftipay.backend.address.province.Province;
 
 import javax.persistence.*;
 import java.util.Date;

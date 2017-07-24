@@ -1,4 +1,4 @@
-package com.peentar.syeftipay.backend.user;
+package com.syeftipay.backend.user;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.query.Param;

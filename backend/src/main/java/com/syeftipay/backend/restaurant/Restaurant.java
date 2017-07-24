@@ -1,9 +1,9 @@
-package com.peentar.syeftipay.backend.restaurant;
+package com.syeftipay.backend.restaurant;
 
-import com.peentar.syeftipay.backend.address.city.City;
-import com.peentar.syeftipay.backend.address.district.District;
-import com.peentar.syeftipay.backend.address.province.Province;
-import com.peentar.syeftipay.backend.user.User;
+import com.syeftipay.backend.address.city.City;
+import com.syeftipay.backend.address.district.District;
+import com.syeftipay.backend.address.province.Province;
+import com.syeftipay.backend.user.User;
 
 import javax.persistence.*;
 import java.util.Date;

@@ -1,4 +1,4 @@
-package com.peentar.syeftipay.backend.user;
+package com.syeftipay.backend.user;
 
 
 public class UserNotFoundException extends RuntimeException{

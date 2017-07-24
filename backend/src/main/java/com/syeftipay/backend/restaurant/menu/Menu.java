@@ -1,7 +1,7 @@
-package com.peentar.syeftipay.backend.restaurant.menu;
+package com.syeftipay.backend.restaurant.menu;
 
-import com.peentar.syeftipay.backend.restaurant.Restaurant;
-import com.peentar.syeftipay.backend.user.User;
+import com.syeftipay.backend.restaurant.Restaurant;
+import com.syeftipay.backend.user.User;
 
 import javax.persistence.*;
 import java.math.BigDecimal;

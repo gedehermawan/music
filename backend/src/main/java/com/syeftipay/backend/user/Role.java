@@ -1,6 +1,6 @@
-package com.peentar.syeftipay.backend.user;
+package com.syeftipay.backend.user;
 
 
 public enum  Role {
-  ADMIN, CUSTOMER;
+  ADMIN, CUSTOMER
 }

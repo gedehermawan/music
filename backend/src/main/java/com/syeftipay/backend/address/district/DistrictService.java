@@ -1,4 +1,4 @@
-package com.peentar.syeftipay.backend.address.district;
+package com.syeftipay.backend.address.district;
 
 import java.util.List;
 

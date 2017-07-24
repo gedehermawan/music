@@ -1,9 +1,9 @@
-package com.peentar.syeftipay.backend.address.district;
+package com.syeftipay.backend.address.district;
 
-import com.peentar.syeftipay.backend.address.city.City;
-import com.peentar.syeftipay.backend.address.city.CityService;
-import com.peentar.syeftipay.backend.address.province.Province;
-import com.peentar.syeftipay.backend.address.province.ProvinceService;
+import com.syeftipay.backend.address.city.City;
+import com.syeftipay.backend.address.city.CityService;
+import com.syeftipay.backend.address.province.Province;
+import com.syeftipay.backend.address.province.ProvinceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

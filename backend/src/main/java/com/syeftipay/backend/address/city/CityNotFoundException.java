@@ -1,4 +1,4 @@
-package com.peentar.syeftipay.backend.address.city;
+package com.syeftipay.backend.address.city;
 
 
 public class CityNotFoundException extends RuntimeException{

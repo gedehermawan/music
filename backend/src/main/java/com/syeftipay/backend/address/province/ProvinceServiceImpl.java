@@ -1,4 +1,4 @@
-package com.peentar.syeftipay.backend.address.province;
+package com.syeftipay.backend.address.province;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,6 +21,6 @@ public class ProvinceServiceImpl implements ProvinceService{
     if(province == null){
       throw new ProvinceNotFoundException(id);
     }
-    return findById(id);
+    return province;
   }
 }

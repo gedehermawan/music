@@ -20,6 +20,18 @@ subprojects {
         repositories {
             jcenter()
         }
+        dependencies {
+            classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.1.RELEASE")
+        }
+    }
+
+    compileJava {
+        options.encoding = 'UTF-8'
+        options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+    }
+
+    dependencies {
+        testCompile 'junit:junit:4.12'
     }
 }
 
