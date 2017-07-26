@@ -1,0 +1,7 @@
+database:
+  driverClassName: org.postgresql.Driver
+  url: jdbc:postgresql://localhost:5432/syeftipay
+  username: {username}
+  password: {password}
+flyway:
+  out-of-order: true
