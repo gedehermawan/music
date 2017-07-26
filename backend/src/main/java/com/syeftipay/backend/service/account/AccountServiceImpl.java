@@ -16,7 +16,7 @@ public class AccountServiceImpl implements AccountService {
   public Account findByEmail(String email) {
     Account account = accountRepository.findByEmail(email);
     if(account == null){
-      throw new AccountNotFoundException("account with email "+email+" is not found");
+      throw new AccountNotFoundException(email);
     }
     return account;
   }
