@@ -2,7 +2,8 @@ rootProject.name = 'syefti-pay'
 
 def String[] modules = [
     'backend',
-    'dbmigration'
+    'dbmigration',
+    'api'
 ]
 
 include modules
