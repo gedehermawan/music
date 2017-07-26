@@ -1,5 +1,5 @@
 CREATE TABLE account (
-    account_id bigint NOT NULL,
+    account_id BIGSERIAL NOT NULL,
     email varchar(100) NOT NULL,
     password varchar(100) NOT NULL,
     role varchar(50) NOT NULL,
