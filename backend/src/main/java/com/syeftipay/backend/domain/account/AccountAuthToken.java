@@ -1,6 +1,7 @@
 package com.syeftipay.backend.domain.account;
 
 import javax.persistence.*;
+import java.util.Calendar;
 import java.util.Date;
 
 @Entity
@@ -22,8 +23,8 @@ public class AccountAuthToken {
   @Column(name = "create_at")
   private Date createAt;
 
-  @Column(name = "last_used")
-  private Date lastUsed;
+  @Column(name = "expired_at")
+  private Date expiredAt;
 
   public AccountAuthToken() {
   }
@@ -32,7 +33,7 @@ public class AccountAuthToken {
     this.accountId = accountId;
     this.token = token;
     this.createAt = new Date();
-    this.lastUsed = createAt;
+    this.expiredAt = addMinutes(createAt,30);
   }
 
   public long getId() {
@@ -67,11 +68,18 @@ public class AccountAuthToken {
     this.createAt = createAt;
   }
 
-  public Date getLastUsed() {
-    return lastUsed;
+  public Date getExpiredAt() {
+    return expiredAt;
   }
 
-  public void setLastUsed(Date lastUsed) {
-    this.lastUsed = lastUsed;
+  public void setExpiredAt(Date expiredAt) {
+    this.expiredAt = expiredAt;
+  }
+
+  private Date addMinutes(Date currentDate, int minute){
+    Calendar cal = Calendar.getInstance();
+    cal.setTime(currentDate);
+    cal.add(Calendar.MINUTE, 10);
+    return cal.getTime();
   }
 }

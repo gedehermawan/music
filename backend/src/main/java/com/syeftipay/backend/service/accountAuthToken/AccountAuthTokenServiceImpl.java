@@ -15,6 +15,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.nio.charset.StandardCharsets;
+import java.util.Date;
 import java.util.UUID;
 
 @Service
@@ -41,10 +42,14 @@ public class AccountAuthTokenServiceImpl implements AccountAuthTokenService{
     }
 
     //insert token to database
-    String token = UUID.randomUUID().toString();
-    repository.save(new AccountAuthToken(verifiedAccount.getAccountId(),hashToken(token)));
+    AccountAuthToken accountAuthToken = repository.findFirstByAccountIdOrderByCreateAtDesc(verifiedAccount.getAccountId());
+    if(accountAuthToken == null || accountAuthToken.getExpiredAt().compareTo(new Date())<0){
+      String token = UUID.randomUUID().toString();
+      repository.save(new AccountAuthToken(verifiedAccount.getAccountId(),hashToken(token)));
 
-    return new AccountAuthInfo(verifiedAccount.getAccountId(),token);
+      return new AccountAuthInfo(verifiedAccount.getAccountId(),token);
+    }
+    return null;
   }
 
   private String hashToken(String token) {
