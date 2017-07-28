@@ -30,4 +30,9 @@ public class AccountServiceImpl implements AccountService {
     account.setPassword(BCrypt.hashpw(account.getPassword(), BCrypt.gensalt()));
     return accountRepository.save(account);
   }
+
+  @Override
+  public Account findById(long id) {
+    return accountRepository.findOne(id);
+  }
 }

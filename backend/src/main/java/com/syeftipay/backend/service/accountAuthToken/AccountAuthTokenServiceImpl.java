@@ -54,8 +54,17 @@ public class AccountAuthTokenServiceImpl implements AccountAuthTokenService{
 
   @Override
   public void logout(long accountId, String token) {
-    String hashedToken = hashToken(token);
-    repository.deleteToken(accountId,hashedToken);
+    repository.deleteToken(accountId,hashToken(token));
+  }
+
+  @Override
+  public boolean isValidToken(long accountId, String token) {
+    return repository.isValidToken(accountId,hashToken(token));
+  }
+
+  @Override
+  public void usedToken(long accountId, String token) {
+    repository.updateTimeStamp(accountId,hashToken(token));
   }
 
   private String hashToken(String token) {

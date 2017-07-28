@@ -17,4 +17,14 @@ public interface AccountAuthTokenRepository extends JpaRepository<AccountAuthTok
   @Query(nativeQuery = true,
           value = "delete from account_auth_token where account_id = :accountId and token = :token")
   void deleteToken(@Param("accountId")long accountId, @Param("token")String token);
+
+  @Query(nativeQuery = true,
+      value = "select exists(select 1 from account_auth_token where account_id = :accountId and token = :token)")
+  boolean isValidToken(@Param("accountId")long accountId, @Param("token")String token);
+
+  @Modifying
+  @Transactional
+  @Query(nativeQuery = true,
+  value = "update account_auth_token set last_used = now() where account_id = :accountId and token = :token")
+  void updateTimeStamp(@Param("accountId")long accountId, @Param("token")String token);
 }
