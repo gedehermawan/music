@@ -26,6 +26,9 @@ public class AccountAuthToken {
   @Column(name = "expired_at")
   private Date expiredAt;
 
+  @Column(name = "last_used")
+  private Date lastUsed;
+
   public AccountAuthToken() {
   }
 
@@ -74,6 +77,14 @@ public class AccountAuthToken {
 
   public void setExpiredAt(Date expiredAt) {
     this.expiredAt = expiredAt;
+  }
+
+  public Date getLastUsed() {
+    return lastUsed;
+  }
+
+  public void setLastUsed(Date lastUsed) {
+    this.lastUsed = lastUsed;
   }
 
   private Date addMinutes(Date currentDate, int minute){
