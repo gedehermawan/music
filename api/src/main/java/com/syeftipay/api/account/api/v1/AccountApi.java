@@ -1,7 +1,6 @@
 package com.syeftipay.api.account.api.v1;
 
 import com.syeftipay.api.handler.JsonErrorResponse;
-import com.syeftipay.backend.domain.account.Role;
 import com.syeftipay.backend.service.account.AccountAlreadyExistException;
 import com.syeftipay.backend.service.account.AccountNotFoundException;
 import com.syeftipay.backend.service.account.AccountService;
@@ -10,6 +9,7 @@ import com.syeftipay.backend.service.accountAuthToken.AccountAuthInfo;
 import com.syeftipay.backend.service.accountAuthToken.AccountAuthTokenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -34,6 +34,12 @@ public class AccountApi {
   @RequestMapping(path = "/login", method = POST, consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
   public AccountAuthInfo login(@RequestBody LoginRequest request) {
     return authService.login(request.getEmail(),request.getPassword());
+  }
+
+  @RequestMapping(path = "/logout", method = POST, consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
+  public ResponseEntity<Void> logout(@RequestBody LogoutRequest request) {
+    authService.logout(request.getAccountId(),request.getToken());
+    return ResponseEntity.ok().build();
   }
 
   @RequestMapping(path = "/register", method = POST, consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)

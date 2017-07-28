@@ -52,6 +52,12 @@ public class AccountAuthTokenServiceImpl implements AccountAuthTokenService{
     return null;
   }
 
+  @Override
+  public void logout(long accountId, String token) {
+    String hashedToken = hashToken(token);
+    repository.deleteToken(accountId,hashedToken);
+  }
+
   private String hashToken(String token) {
     HashCode hash = sha1.hashString(token, StandardCharsets.US_ASCII);
     return hash.toString();
