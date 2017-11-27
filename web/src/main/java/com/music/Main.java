@@ -1,7 +1,12 @@
 package com.music;
 
-/**
- * Created by peentar on 11/27/17.
- */
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
 public class Main {
+  public static void main(String[] args) {
+    SpringApplication.run(Main.class, args);
+  }
 }

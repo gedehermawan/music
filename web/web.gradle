@@ -1,0 +1,45 @@
+buildscript {
+    ext {
+        springBootVersion = '1.5.6.RELEASE'
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+plugins {
+    id 'net.ltgt.apt' version '0.12'
+}
+
+
+apply plugin: 'application'
+apply plugin: 'org.springframework.boot'
+
+
+task stage {
+    dependsOn build
+}
+
+jar {
+    baseName = 'heroku-music'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    // springframework boot starter
+    compile("org.springframework.boot:spring-boot-starter-data-jpa:${springBootVersion}")
+    compile("org.springframework.boot:spring-boot-starter-data-rest:${springBootVersion}")
+    compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
+    compile("org.springframework.boot:spring-boot-starter-security:${springBootVersion}")
+    compile("org.springframework.boot:spring-boot-devtools:${springBootVersion}")
+    compile('org.springframework.security:spring-security-crypto:4.2.3.RELEASE')
+
+    //front end templating
+    compile('org.woodylab.boot:spring-boot-starter-pebble:0.2.3')
+
+    compile("com.google.guava:guava:19.0")
+    runtime('org.postgresql:postgresql:9.4-1205-jdbc42')
+}

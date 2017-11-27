@@ -1,15 +1,16 @@
-rootProject.name = 'syefti-pay'
+rootProject.name = 'music'
 
 def String[] modules = [
-    'backend',
+    'database',
     'dbmigration',
-    'api'
+    'web',
+    'service'
 ]
 
 include modules
 
 modules.each { name ->
     def p = findProject(":${name}")
-    p.name = "syefti-pay-${name}"
+    p.name = "music-${name}"
     p.buildFileName = "${name}.gradle"
 }

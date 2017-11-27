@@ -29,10 +29,6 @@ public class Account {
   @Column(name = "password")
   String password;
 
-  @Enumerated(EnumType.STRING)
-  @Column(name = "role")
-  Role role;
-
   @Column(name = "create_at")
   Date createAt;
 
@@ -91,14 +87,6 @@ public class Account {
 
   public void setUpdateAt(Date updateAt) {
     this.updateAt = updateAt;
-  }
-
-  public Role getRole() {
-    return role;
-  }
-
-  public void setRole(Role role) {
-    this.role = role;
   }
 
   public char getDeleted() {
