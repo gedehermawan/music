@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar web/build/libs/heroku-music.jar
+web: java $JAVA_OPTS -Dserver.port=$PORT -jar web/build/libs/heroku-music.jar
