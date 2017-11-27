@@ -1,1 +1,0 @@
-ALTER TABLE account_auth_token ADD COLUMN last_used TIMESTAMP WITH TIME ZONE
