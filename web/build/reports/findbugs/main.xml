@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<BugCollection version="3.0.1" sequence="0" timestamp="1511774443586" analysisTimestamp="1511774443600" release="">
+<BugCollection version="3.0.1" sequence="0" timestamp="1511780683904" analysisTimestamp="1511780683919" release="">
   <Project projectName="">
     <Jar>/home/peentar/dev/Gede/Project/music/web/build/classes/java/main</Jar>
     <AuxClasspathEntry>/home/peentar/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-data-jpa/1.5.6.RELEASE/d75804c399bfc78f5ae32a04696aeb71926a49b5/spring-boot-starter-data-jpa-1.5.6.RELEASE.jar</AuxClasspathEntry>
@@ -75,29 +75,28 @@
     <SrcDir>/home/peentar/dev/Gede/Project/music/web/src/main/java/com/music/security/WebSecurityConfig.java</SrcDir>
   </Project>
   <Errors errors="0" missingClasses="0"></Errors>
-  <FindBugsSummary timestamp="Mon, 27 Nov 2017 16:20:43 +0700" total_classes="3" referenced_classes="76" total_bugs="0" total_size="39" num_packages="3" java_version="1.8.0_101" vm_version="25.101-b13" cpu_seconds="3.67" clock_seconds="1.09" peak_mbytes="179.55" alloc_mbytes="3550.50" gc_seconds="0.03">
+  <FindBugsSummary timestamp="Mon, 27 Nov 2017 18:04:43 +0700" total_classes="3" referenced_classes="76" total_bugs="0" total_size="41" num_packages="3" java_version="1.8.0_101" vm_version="25.101-b13" cpu_seconds="3.76" clock_seconds="1.15" peak_mbytes="179.06" alloc_mbytes="3550.50" gc_seconds="0.04">
     <PackageStats package="com.music" total_bugs="0" total_types="1" total_size="6">
       <ClassStats class="com.music.Main" sourceFile="Main.java" interface="false" size="6" bugs="0"/>
     </PackageStats>
-    <PackageStats package="com.music.controller" total_bugs="0" total_types="1" total_size="9">
-      <ClassStats class="com.music.controller.LoginController" sourceFile="LoginController.java" interface="false" size="9" bugs="0"/>
+    <PackageStats package="com.music.controller" total_bugs="0" total_types="1" total_size="11">
+      <ClassStats class="com.music.controller.LoginController" sourceFile="LoginController.java" interface="false" size="11" bugs="0"/>
     </PackageStats>
     <PackageStats package="com.music.security" total_bugs="0" total_types="1" total_size="24">
       <ClassStats class="com.music.security.WebSecurityConfig" sourceFile="WebSecurityConfig.java" interface="false" size="24" bugs="0"/>
     </PackageStats>
     <FindBugsProfile>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="206" invocations="772" avgMicrosecondsPerInvocation="267" maxMicrosecondsPerInvocation="21899" standardDeviationMircosecondsPerInvocation="982"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="97" invocations="782" avgMicrosecondsPerInvocation="124" maxMicrosecondsPerInvocation="3712" standardDeviationMircosecondsPerInvocation="150"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="54" invocations="76" avgMicrosecondsPerInvocation="715" maxMicrosecondsPerInvocation="10211" standardDeviationMircosecondsPerInvocation="1534"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="44" invocations="76" avgMicrosecondsPerInvocation="591" maxMicrosecondsPerInvocation="6995" standardDeviationMircosecondsPerInvocation="1166"/>
-      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="33" invocations="174" avgMicrosecondsPerInvocation="192" maxMicrosecondsPerInvocation="2849" standardDeviationMircosecondsPerInvocation="296"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="31" invocations="130" avgMicrosecondsPerInvocation="241" maxMicrosecondsPerInvocation="10334" standardDeviationMircosecondsPerInvocation="951"/>
-      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="30" invocations="740" avgMicrosecondsPerInvocation="41" maxMicrosecondsPerInvocation="922" standardDeviationMircosecondsPerInvocation="83"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.impl.ZipCodeBaseFactory" totalMilliseconds="26" invocations="83" avgMicrosecondsPerInvocation="323" maxMicrosecondsPerInvocation="21629" standardDeviationMircosecondsPerInvocation="2353"/>
-      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="24" invocations="8" avgMicrosecondsPerInvocation="3079" maxMicrosecondsPerInvocation="23236" standardDeviationMircosecondsPerInvocation="7619"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="19" invocations="76" avgMicrosecondsPerInvocation="262" maxMicrosecondsPerInvocation="6223" standardDeviationMircosecondsPerInvocation="764"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="16" invocations="76" avgMicrosecondsPerInvocation="215" maxMicrosecondsPerInvocation="2482" standardDeviationMircosecondsPerInvocation="452"/>
-      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="15" invocations="76" avgMicrosecondsPerInvocation="208" maxMicrosecondsPerInvocation="7106" standardDeviationMircosecondsPerInvocation="835"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="213" invocations="772" avgMicrosecondsPerInvocation="276" maxMicrosecondsPerInvocation="24264" standardDeviationMircosecondsPerInvocation="1174"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="94" invocations="782" avgMicrosecondsPerInvocation="121" maxMicrosecondsPerInvocation="4236" standardDeviationMircosecondsPerInvocation="200"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="60" invocations="76" avgMicrosecondsPerInvocation="799" maxMicrosecondsPerInvocation="10342" standardDeviationMircosecondsPerInvocation="1678"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="59" invocations="76" avgMicrosecondsPerInvocation="780" maxMicrosecondsPerInvocation="19001" standardDeviationMircosecondsPerInvocation="2312"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="42" invocations="740" avgMicrosecondsPerInvocation="57" maxMicrosecondsPerInvocation="13457" standardDeviationMircosecondsPerInvocation="499"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="38" invocations="175" avgMicrosecondsPerInvocation="222" maxMicrosecondsPerInvocation="2660" standardDeviationMircosecondsPerInvocation="326"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="32" invocations="130" avgMicrosecondsPerInvocation="247" maxMicrosecondsPerInvocation="9981" standardDeviationMircosecondsPerInvocation="955"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="28" invocations="76" avgMicrosecondsPerInvocation="379" maxMicrosecondsPerInvocation="14205" standardDeviationMircosecondsPerInvocation="1654"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="23" invocations="9" avgMicrosecondsPerInvocation="2654" maxMicrosecondsPerInvocation="22495" standardDeviationMircosecondsPerInvocation="7015"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="19" invocations="76" avgMicrosecondsPerInvocation="262" maxMicrosecondsPerInvocation="5826" standardDeviationMircosecondsPerInvocation="756"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="16" invocations="76" avgMicrosecondsPerInvocation="214" maxMicrosecondsPerInvocation="7133" standardDeviationMircosecondsPerInvocation="850"/>
     </FindBugsProfile>
   </FindBugsSummary>
   <ClassFeatures></ClassFeatures>

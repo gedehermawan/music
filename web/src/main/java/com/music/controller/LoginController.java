@@ -9,18 +9,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class LoginController {
   @RequestMapping(value = "/", method = RequestMethod.GET)
   public String viewRoot(Model model){
-    return "/authenticate/login";
+    return "authenticate/login";
   }
 
   @RequestMapping(value = "/login", method = RequestMethod.GET)
   public String view(Model model){
     model.addAttribute("test","test");
-    return "/authenticate/login";
+    return "helo/login";
   }
 
   @RequestMapping(value = "/login", method = RequestMethod.POST)
   public String login(Model model){
     model.addAttribute("test","test");
-    return "/home";
+    return "home";
   }
 }
