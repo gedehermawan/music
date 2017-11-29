@@ -1,4 +1,4 @@
-package com.syeftipay.dbmigration;
+package com.music.dbmigration;
 
 import org.flywaydb.core.Flyway;
 import org.springframework.beans.factory.annotation.Autowired;

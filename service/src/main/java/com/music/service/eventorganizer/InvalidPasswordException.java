@@ -1,4 +1,4 @@
-package com.music.service.account;
+package com.music.service.eventorganizer;
 
 
 public class InvalidPasswordException extends RuntimeException {

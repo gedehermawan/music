@@ -1,7 +1,7 @@
 apply plugin: 'application'
 apply plugin: 'spring-boot'
 
-mainClassName = 'com.syeftipay.dbmigration.Main'
+mainClassName = 'com.music.dbmigration.Main'
 
 buildscript {
     ext {

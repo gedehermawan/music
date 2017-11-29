@@ -1,4 +1,4 @@
-package com.syeftipay.backend.domain.account;
+package com.music.backend.domain.account;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -10,17 +10,21 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Column;
 import javax.persistence.ManyToOne;
 import javax.persistence.JoinColumn;
-import javax.persistence.Enumerated;
-import javax.persistence.EnumType;
 import java.util.Date;
 
 @Entity
-@Table(name = "account")
-public class Account {
+@Table(name = "event_organizer")
+public class EventOrganizer {
   @Id
   @GeneratedValue(strategy= GenerationType.IDENTITY)
-  @Column(name="account_id")
-  long accountId;
+  @Column(name="event_organizer_id")
+  long eventOrganizerId;
+
+  @Column(name = "name")
+  String name;
+
+  @Column(name = "phone")
+  String phone;
 
   @Column(name = "email")
   String email;
@@ -40,21 +44,13 @@ public class Account {
 
   @ManyToOne
   @JoinColumn(name = "create_by")
-  Account createBy;
+  EventOrganizer createBy;
 
   @ManyToOne
   @JoinColumn(name = "update_by")
-  Account updateBy;
+  EventOrganizer updateBy;
 
-  public Account() {
-  }
-
-  public long getAccountId() {
-    return accountId;
-  }
-
-  public void setAccountId(long accountId) {
-    this.accountId = accountId;
+  public EventOrganizer() {
   }
 
   public String getEmail() {
@@ -97,19 +93,43 @@ public class Account {
     this.deleted = deleted;
   }
 
-  public Account getCreateBy() {
+  public EventOrganizer getCreateBy() {
     return createBy;
   }
 
-  public void setCreateBy(Account createBy) {
+  public void setCreateBy(EventOrganizer createBy) {
     this.createBy = createBy;
   }
 
-  public Account getUpdateBy() {
+  public EventOrganizer getUpdateBy() {
     return updateBy;
   }
 
-  public void setUpdateBy(Account updateBy) {
+  public void setUpdateBy(EventOrganizer updateBy) {
     this.updateBy = updateBy;
+  }
+
+  public long getEventOrganizerId() {
+    return eventOrganizerId;
+  }
+
+  public void setEventOrganizerId(long eventOrganizerId) {
+    this.eventOrganizerId = eventOrganizerId;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public String getPhone() {
+    return phone;
+  }
+
+  public void setPhone(String phone) {
+    this.phone = phone;
   }
 }
