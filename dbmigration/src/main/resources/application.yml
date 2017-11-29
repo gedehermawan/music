@@ -4,4 +4,4 @@ database:
   username: yqdalkauhojyvn
   password: 2caa07fb6fb2e4ce546c8c297f733c2a05042f83fcd2b4cb346912f8e987eaee
 flyway:
-  out-of-order: true 
+  out-of-order: true
