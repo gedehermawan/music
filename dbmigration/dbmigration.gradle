@@ -24,3 +24,11 @@ dependencies {
 bootRepackage {
     classifier = "bin"
 }
+
+task stage {
+    dependsOn build
+}
+
+jar {
+    baseName = 'heroku-music-dbmigration'
+}
