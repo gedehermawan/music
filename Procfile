@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar dbmigration/build/libs/heroku-music-dbmigration.jar
+web: java $JAVA_OPTS -jar dbmigration/build/libs/heroku-music-dbmigration-bin.jar
