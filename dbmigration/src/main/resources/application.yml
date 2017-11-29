@@ -1,7 +1,7 @@
 database:
   driverClassName: org.postgresql.Driver
-  url: jdbc:postgresql://ec2-107-21-113-16.compute-1.amazonaws.com:5432/de4ntu8ghrfov9
-  username: yqdalkauhojyvn
-  password: 2caa07fb6fb2e4ce546c8c297f733c2a05042f83fcd2b4cb346912f8e987eaee
+  url: jdbc:postgresql://localhost:5432/testmusic
+  username: test
+  password: test
 flyway:
   out-of-order: true

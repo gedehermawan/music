@@ -25,9 +25,8 @@ bootRepackage {
     classifier = "bin"
 }
 
-task stage {
-    dependsOn build
-}
+task stage(dependsOn: ['build', 'clean'])
+build.mustRunAfter clean
 
 jar {
     baseName = 'heroku-music-dbmigration'
