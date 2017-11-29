@@ -1,7 +1,0 @@
-logging:
-  level:
-    root: INFO
-    org.springframework.boot: INFO
-    org.hibernate.SQL: INFO
-
-spring.devtools.livereload.enabled: true
