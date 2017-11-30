@@ -1,25 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-</head>
-<body>
-<h3>Selamat Datang Bro!</h3>
-<form action="/login" method="POST">
-    <table>
-        <tbody>
-            <tr>
-                <td>Email</td>
-                <td>: <input type="text" name="email"></td>
-            </tr>
-            <tr>
-                <td>Password</td>
-                <td>: <input type="text" name="password"></td>
-            </tr>
-        </tbody>
-    </table>
-    <input type="submit" value="Masuk">
-</form>
-</body>
-</html>
+{% extends "layout/master" %}
+
+{% block content %}
+
+<div class="row">
+    <h4>Selamat datang di indie lokal</h4>
+    <div class="col s12 login-form">
+        <form action="/login" method="POST">
+            <div class="row">
+                <div class="col s1">Email</div>
+                <div class="col s1 right-align">:</div>
+                <div class="col s6">
+                    <input type="text" name="email">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s1">Password</div>
+                <div class="col s1 right-align">:</div>
+                <div class="col s6">
+                    <input type="text" name="password">
+                </div>
+            </div>
+            <button class="waves-effect waves-light btn">Login</button>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col s2">
+            <a href="/register/eo">Daftar Sebagai Event Organizer</a>
+        </div>
+        <div class="col s2">
+            <a href="/register/talent">Daftar Sebagai Talent</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

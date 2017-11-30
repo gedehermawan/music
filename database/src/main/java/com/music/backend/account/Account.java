@@ -9,7 +9,8 @@ import java.util.Date;
 @Table(name = "account")
 public class Account {
   @Id
-  @GeneratedValue(strategy= GenerationType.IDENTITY)
+  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "account_id_seq")
+  @SequenceGenerator(name = "account_id_seq", sequenceName = "account_id_seq", allocationSize=1)
   @Column(name="account_id")
   long accountId;
 
@@ -37,6 +38,9 @@ public class Account {
   Date updateAt;
 
   public Account() {
+    this.deleted = '0';
+    this.createAt = new Date();
+    this.updateAt = createAt;
   }
 
   public long getAccountId() {

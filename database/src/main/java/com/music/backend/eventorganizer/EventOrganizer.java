@@ -1,18 +1,14 @@
 package com.music.backend.eventorganizer;
 
-import javax.persistence.Table;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.GenerationType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Column;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 @Table(name = "event_organizer")
 public class EventOrganizer {
   @Id
-  @GeneratedValue(strategy= GenerationType.IDENTITY)
+  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "event_organizer_id_seq")
+  @SequenceGenerator(name = "event_organizer_id_seq", sequenceName = "event_organizer_id_seq", allocationSize=1)
   @Column(name="event_organizer_id")
   long eventOrganizerId;
 
@@ -32,6 +28,9 @@ public class EventOrganizer {
   char deleted;
 
   public EventOrganizer() {
+    this.deleted = '0';
+    this.createAt = new Date();
+    this.updateAt = createAt;
   }
 
   public Date getCreateAt() {

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Import Google Icon Font-->
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="/res/css/materialize.min.css"  media="all"/>
+    <link rel="stylesheet" type="text/css" href="/res/css/style.css" media="all">
+
+    <!--Import Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!--Import Bootstrap-notify-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-notify/0.2.0/css/bootstrap-notify.min.css">
+    <title>{% block title %}{% endblock %}</title>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row bg-color">
+        {% block content %}{% endblock %}
+    </div>
+</div>
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="/res/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="/res/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/res/js/materialize.js"></script>
+
+{% block script %} {% endblock %}
+</body>
+</html>
