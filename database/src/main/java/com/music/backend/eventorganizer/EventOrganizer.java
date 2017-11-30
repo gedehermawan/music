@@ -1,6 +1,4 @@
-package com.music.backend.domain.account;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
+package com.music.backend.eventorganizer;
 
 import javax.persistence.Table;
 import javax.persistence.Entity;
@@ -8,8 +6,6 @@ import javax.persistence.Id;
 import javax.persistence.GenerationType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Column;
-import javax.persistence.ManyToOne;
-import javax.persistence.JoinColumn;
 import java.util.Date;
 
 @Entity
@@ -26,13 +22,6 @@ public class EventOrganizer {
   @Column(name = "phone")
   String phone;
 
-  @Column(name = "email")
-  String email;
-
-  @JsonIgnore
-  @Column(name = "password")
-  String password;
-
   @Column(name = "create_at")
   Date createAt;
 
@@ -42,31 +31,7 @@ public class EventOrganizer {
   @Column(name = "deleted")
   char deleted;
 
-  @ManyToOne
-  @JoinColumn(name = "create_by")
-  EventOrganizer createBy;
-
-  @ManyToOne
-  @JoinColumn(name = "update_by")
-  EventOrganizer updateBy;
-
   public EventOrganizer() {
-  }
-
-  public String getEmail() {
-    return email;
-  }
-
-  public void setEmail(String email) {
-    this.email = email;
-  }
-
-  public String getPassword() {
-    return password;
-  }
-
-  public void setPassword(String password) {
-    this.password = password;
   }
 
   public Date getCreateAt() {
@@ -91,22 +56,6 @@ public class EventOrganizer {
 
   public void setDeleted(char deleted) {
     this.deleted = deleted;
-  }
-
-  public EventOrganizer getCreateBy() {
-    return createBy;
-  }
-
-  public void setCreateBy(EventOrganizer createBy) {
-    this.createBy = createBy;
-  }
-
-  public EventOrganizer getUpdateBy() {
-    return updateBy;
-  }
-
-  public void setUpdateBy(EventOrganizer updateBy) {
-    this.updateBy = updateBy;
   }
 
   public long getEventOrganizerId() {
