@@ -11,6 +11,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
 @Configuration
 @EnableWebSecurity
@@ -25,16 +26,19 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         .authorizeRequests()
         .antMatchers("/res/**").permitAll()
         .antMatchers("/login/**").permitAll()
+        .antMatchers("/register/**").permitAll()
         .antMatchers("/").permitAll()
-//        .anyRequest().authenticated()
+        .anyRequest().authenticated()
         .and()
         .exceptionHandling().accessDeniedPage("/access-denied")
         .and()
         .formLogin()
         .loginPage("/login")
-        .defaultSuccessUrl("/")
+        .usernameParameter("email")
+        .passwordParameter("password")
+        .defaultSuccessUrl("/home")
         .permitAll()
-//        .successHandler(authenticationSuccessHandler())
+        .successHandler(authenticationSuccessHandler())
         .and()
         .logout()
         .logoutUrl("/logout")
@@ -44,5 +48,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
   @Bean(name = "passwordEncoder")
   public PasswordEncoder passwordencoder() {
     return new BCryptPasswordEncoder();
+  }
+
+  @Bean
+  public AuthenticationSuccessHandler authenticationSuccessHandler() {
+    return new ProcessAuthSuccess();
   }
 }

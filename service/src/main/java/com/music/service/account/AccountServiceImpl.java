@@ -24,4 +24,10 @@ public class AccountServiceImpl implements AccountService{
     account.setObjectId(request.getObjectId());
     return accountRepository.save(account);
   }
+
+  @Override
+  public User findByEmail(String email) {
+    Account account = accountRepository.findByEmail(email);
+    return new User(account.getAccountId(),account.getEmail(),account.getPassword(),account.getRole().toString());
+  }
 }

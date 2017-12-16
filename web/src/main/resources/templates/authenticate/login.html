@@ -4,6 +4,7 @@
 
 <div class="row">
     <h4>Selamat datang di indie lokal</h4>
+    <span>{{errorMessage}}</span>
     <div class="col s12 login-form">
         <form action="/login" method="POST">
             <div class="row">
@@ -17,7 +18,7 @@
                 <div class="col s1">Password</div>
                 <div class="col s1 right-align">:</div>
                 <div class="col s6">
-                    <input type="text" name="password">
+                    <input type="password" name="password">
                 </div>
             </div>
             <button class="waves-effect waves-light btn">Login</button>
