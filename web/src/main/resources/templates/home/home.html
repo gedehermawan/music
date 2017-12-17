@@ -1,13 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-</head>
-<body>
-Selamat datang bro, {{user.username}}<br>
-Anda masuk sebagai {{user.role}}
-<br><br>
-<a href="/logout">Keluar</a>
-</body>
-</html>
+{% extends "layout/master" %}
+
+{% block content %}
+
+<div class="row">
+    <div class="row inner-content">
+        <div class="row body-content">
+            <h4>Indie Lokal</h4>
+            {% if user is not null %}
+            <h5>Selamat datang, {{user.username}}</h5>
+            <h5><a href="/logout">Keluar</a></h5>
+            {% else %}
+            <h5><a href="/login">Login</a></h5>
+            {% endif %}
+
+            <table>
+                <thead>
+                <th>Nama Talent</th>
+                <th>Genre</th>
+                <th>Lokasi</th>
+                <th></th>
+                </thead>
+
+                <tbody>
+                {% for talent in talents %}
+                <tr>
+                    <td><span>{{talent.name}}</span></td>
+                    <td><span>{{talent.genre}}</span></td>
+                    <td><span>{{talent.location}}</span></td>
+                    <td><a href="/talent/{{talent.talentId}}/detail">Detail</a></td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

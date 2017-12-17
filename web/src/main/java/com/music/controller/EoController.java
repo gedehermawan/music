@@ -1,6 +1,5 @@
 package com.music.controller;
 
-import com.music.backend.eventorganizer.EventOrganizer;
 import com.music.service.account.EmailAlreadyExistsException;
 import com.music.service.eventorganizer.AddEventOrganizerRequest;
 import com.music.service.eventorganizer.EventOrganizerService;
@@ -12,18 +11,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
-@RequestMapping("/register")
-public class RegisterController {
-
+@RequestMapping("/eo")
+public class EoController {
   @Autowired
   EventOrganizerService eventOrganizerService;
 
-  @RequestMapping(value = "/eo", method = RequestMethod.GET)
+  @RequestMapping(value = "/register", method = RequestMethod.GET)
   public String registerEoView(Model model){
     return "register/register_eo";
   }
 
-  @RequestMapping(value = "/eo", method = RequestMethod.POST)
+  @RequestMapping(value = "/register", method = RequestMethod.POST)
   public String registerEoPost(AddEventOrganizerRequest addEventOrganizerRequest,
                                RedirectAttributes redirectAttributes){
     try {
@@ -31,12 +29,7 @@ public class RegisterController {
       return "redirect:/login";
     }catch (EmailAlreadyExistsException e){
       redirectAttributes.addFlashAttribute("message", e.getMessage());
-      return "redirect:/register/eo";
+      return "redirect:/eo/register";
     }
-  }
-
-  @RequestMapping(value = "/talent", method = RequestMethod.GET)
-  public String registerTalent(){
-    return "authenticate/login";
   }
 }

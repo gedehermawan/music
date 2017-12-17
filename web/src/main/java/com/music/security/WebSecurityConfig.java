@@ -26,7 +26,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         .authorizeRequests()
         .antMatchers("/res/**").permitAll()
         .antMatchers("/login/**").permitAll()
-        .antMatchers("/register/**").permitAll()
+        .antMatchers("/eo/register").permitAll()
+        .antMatchers("/talent/**").permitAll()
+        .antMatchers("/home").permitAll()
         .antMatchers("/").permitAll()
         .anyRequest().authenticated()
         .and()
@@ -42,7 +44,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         .and()
         .logout()
         .logoutUrl("/logout")
-        .logoutSuccessUrl("/login");
+        .logoutSuccessUrl("/home");
   }
 
   @Bean(name = "passwordEncoder")

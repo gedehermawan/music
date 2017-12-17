@@ -1,0 +1,51 @@
+{% extends "layout/master" %}
+
+{% block content %}
+
+<div class="row">
+    <div class="row inner-content">
+        <div class="row body-content">
+            <h6><a href="/home">Kembali</a></h6>
+            <h4>{{talent.name}}</h4>
+            <hr>
+            <div class="row talent-detail">
+                <div class="row">
+                    <div class="col s1">Genre</div>
+                    <div class="col s1 right-align">:</div>
+                    <div class="col s6">{{talent.genre}}</div>
+                </div>
+                <div class="row">
+                    <div class="col s1">Harga</div>
+                    <div class="col s1 right-align">:</div>
+                    <div class="col s1">{{talent.price1}}</div>
+                    <div class="col s1 center-align">
+                        sampai
+                    </div>
+                    <div class="col s1">{{talent.price2}}</div>
+                </div>
+                <div class="row">
+                    <div class="col s1">Lokasi</div>
+                    <div class="col s1 right-align">:</div>
+                    <div class="col s6">{{talent.location}}</div>
+                </div>
+                <div class="row">
+                    <div class="col s1">Nomor Handphone</div>
+                    <div class="col s1 right-align">:</div>
+                    <div class="col s6">{{talent.phone}}</div>
+                </div>
+                <div class="row">
+                    <div class="col s1">Email</div>
+                    <div class="col s1 right-align">:</div>
+                    <div class="col s6">{{talent.email}}</div>
+                </div>
+                <div class="row">
+                    <div class="col s1">Link Video</div>
+                    <div class="col s1 right-align">:</div>
+                    <div class="col s6"><a href="{{talent.videoLink}}">{{talent.name}}</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

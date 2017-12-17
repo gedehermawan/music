@@ -1,0 +1,70 @@
+{% extends "layout/master" %}
+
+{% block content %}
+
+<div class="row">
+    <h4>Registrasi sebagai Talent</h4>
+    <p>{{message}}</p>
+    <div class="col s12 login-form">
+        <form action="/talent/register" method="POST">
+            <div class="row">
+                <div class="col s1">Nama</div>
+                <div class="col s1 right-align">:</div>
+                <div class="col s6">
+                    <input type="text" name="name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s1">Harga</div>
+                <div class="col s1 right-align">:</div>
+                <div class="col s2">
+                    <input type="number" name="price1">
+                </div>
+                <div class="col s1">
+                    sampai
+                </div>
+                <div class="col s2">
+                    <input type="number" name="price2">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s1">Lokasi</div>
+                <div class="col s1 right-align">:</div>
+                <div class="col s6">
+                    <input type="text" name="location">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s1">Nomor Handphone</div>
+                <div class="col s1 right-align">:</div>
+                <div class="col s6">
+                    <input type="text" name="phone">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s1">Email</div>
+                <div class="col s1 right-align">:</div>
+                <div class="col s6">
+                    <input type="text" name="email">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s1">Link Video</div>
+                <div class="col s1 right-align">:</div>
+                <div class="col s6">
+                    <input type="text" name="videoLink">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s1">Genre</div>
+                <div class="col s1 right-align">:</div>
+                <div class="col s6">
+                    <input type="text" name="genre">
+                </div>
+            </div>
+            <button class="waves-effect waves-light btn">Daftar</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
